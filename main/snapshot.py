@@ -18,7 +18,7 @@ def main():
     print(message)
 
     parser = argparse.ArgumentParser(description='parser of arguments')
-    parser.add_argument("-i", help="Interval between snapshots", type=int, default=3)
+    parser.add_argument("-i", help="Interval between snapshots", type=int, default=30)
     parser.add_argument("-t", help="Output file type", default="txt")
     args = parser.parse_args()
 
