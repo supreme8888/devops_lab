@@ -19,7 +19,7 @@ def main():
 
     parser = argparse.ArgumentParser(description='parser of arguments')
     parser.add_argument("-i", help="Interval between snapshots", type=int, default=30)
-    parser.add_argument("-t", help="Output file type", default="txt")
+    parser.add_argument("-t", help="Output file type txt or json", default="txt")
     args = parser.parse_args()
 
     if args.t == "json":
