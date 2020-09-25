@@ -8,6 +8,7 @@ def get_pulls(state):
     else:
         return get_list_all(state)
 
+
 def get_list_res(state):
     response = requests.get('https://api.github.com/repos/alenaPy/devops_lab/pulls?state=all&per_page=100')
     res = response.json()
