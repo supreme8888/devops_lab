@@ -11,7 +11,8 @@ def get_pulls(state):
 
 
 def get_list_res(state):
-    response = requests.get('https://api.github.com/repos/alenaPy/devops_lab/pulls?state=all&per_page=100')
+    l = 'https://api.github.com/repos/alenaPy/devops_lab/pulls?state=all&per_page=100'
+    response = requests.get(l)
     res = response.json()
     list_res = []
     for i in res:
@@ -23,7 +24,8 @@ def get_list_res(state):
 
 def get_list_label(state):
     if state == "accepted" or state == "needs work":
-        response = requests.get('https://api.github.com/repos/alenaPy/devops_lab/pulls?per_page=100&state=all')
+        l = 'https://api.github.com/repos/alenaPy/devops_lab/pulls?state=all&per_page=100'
+        response = requests.get(l)
         res = response.json()
         list_res = []
         for i in res:
@@ -35,7 +37,8 @@ def get_list_label(state):
 
 
 def get_list_all(state):
-    response = requests.get('https://api.github.com/repos/alenaPy/devops_lab/pulls?state=all&per_page=100')
+    l = 'https://api.github.com/repos/alenaPy/devops_lab/pulls?state=all&per_page=100'
+    response = requests.get(l)
     res = response.json()
     list_res = []
     for i in res:
