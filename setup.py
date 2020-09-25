@@ -9,7 +9,7 @@ setup(
         ],
     },
     install_requires=[
-        "argsparse", "psutil", "fatetime"
+        "argsparse", "psutil", "datetime"
     ],
     version="0.1",
     author="Viktor Gulinskiy",
