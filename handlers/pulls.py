@@ -1,5 +1,6 @@
 import requests
 
+
 def get_pulls(state):
     if state == "open" or state == "closed":
         return get_list_res(state)
@@ -15,7 +16,7 @@ def get_list_res(state):
     list_res = []
     for i in res:
         if i["state"] == state:
-            dict = {"num": i['number'], "title": i['title'],"link": i['url']}
+            dict = {"num": i['number'], "title": i['title'], "link": i['url']}
             list_res.append(dict)
     return(list_res)
 
@@ -38,6 +39,6 @@ def get_list_all(state):
     res = response.json()
     list_res = []
     for i in res:
-        dict = {"num": i['number'], "title": i['title'],"link": i['url']}
+        dict = {"num": i['number'], "title": i['title'], "link": i['url']}
         list_res.append(dict)
     return(list_res)
